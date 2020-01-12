@@ -34,7 +34,7 @@ td:nth-child(even) {
 
 .card-back-color{
     /* background-color: #E94b3cff; */
-    background-color: lightslategrey
+    background-color: black;
 }
 
 .floated {
