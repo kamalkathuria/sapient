@@ -1,0 +1,29 @@
+.searchbar {
+    width: 50% !important;
+    display: inline-block;
+    margin-bottom:25px;
+}
+
+.sort{
+    float: right;
+    width: 25% !important;
+    display: inline-grid;
+}
+
+
+
+.field {
+    width: 100%;
+}
+.sort-field {
+    display: block;
+    margin: 0 0 .28571429rem 0;
+    color: rgba(0,0,0,.87);
+    font-size: .92857143em;
+    font-weight: 700;
+    text-transform: none;
+}
+
+input[type=text]{
+    width: inherit;
+}

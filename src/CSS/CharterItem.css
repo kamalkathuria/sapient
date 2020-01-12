@@ -1,0 +1,47 @@
+td {
+    font-weight: bold;
+    width: 105px;
+}
+
+.header {
+    margin-left: 10px;
+    margin-top: 5px;
+
+}
+td:nth-child(odd) {
+    text-transform: uppercase !important;
+    color: lightgray;
+    text-align: justify !important;
+}
+
+td:nth-child(even) {
+    color: #E94b3cff;
+    /* width: max-content; */
+    text-transform: capitalize !important;
+    text-align: justify;
+}
+
+.backcolor{
+    /* padding: 15px; */
+    /* background-color: black; */  
+    margin-right: 3px;
+    margin-left: -3px;
+}
+
+.image img{ 
+    width: 100%;
+}
+
+.card-back-color{
+    /* background-color: #E94b3cff; */
+    background-color: lightslategrey
+}
+
+.floated {
+    float: right;
+    margin-right: 5px;
+}
+
+.card{
+    background-color: lightslategray;
+}
