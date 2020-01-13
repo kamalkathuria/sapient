@@ -1,6 +1,6 @@
 .searchbar {
     width: 50% !important;
-    display: inline-block;
+    display: inline;
     margin-bottom:25px;
 }
 
@@ -9,8 +9,6 @@
     width: 25% !important;
     display: inline-grid;
 }
-
-
 
 .field {
     width: 100%;

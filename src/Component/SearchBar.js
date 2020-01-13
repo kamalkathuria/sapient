@@ -20,7 +20,7 @@ class SearchBar extends React.Component {
     render() {
         return (
             <div className='main'>
-                <div className="search-bar ui searchbar"> 
+                <div className="searchbar"> 
                     <form onSubmit={this.onSearch} className="ui form">
                         <label>Character Search</label>
                         <div className="field">

@@ -1,9 +1,7 @@
-import axios from 'axios';
+const API = {
+    
+    characterFetch : 'https://rickandmortyapi.com/api/character?',
+    searchCharacter : 'https://rickandmortyapi.com/api/character/?name='    
+}
 
-const KEY = '';
-
-
-export default axios.create({
-    baseURL: 'https://rickandmortyapi.com/api/',
-
-})
+export default API;

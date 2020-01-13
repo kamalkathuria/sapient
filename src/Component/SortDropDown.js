@@ -16,8 +16,8 @@ class SortDropDown extends React.Component {
     render() {
         return (
             <>
-                <label className='main'>Sort by ID</label>
                 <div className='main'>
+                    <label className='main'>Sort by ID</label>
                     <select onChange={this.onSort}>
                         <option value='aesc'>Ascending order</option>
                         <option value='desc'>Descending order</option>

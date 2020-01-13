@@ -15,14 +15,14 @@ td:nth-child(odd) {
 }
 
 td:nth-child(even) {
-    color: #E94b3cff;
+    color: black;
     /* width: max-content; */
     text-transform: capitalize !important;
     text-align: justify;
 }
 
 .backcolor{
-    /* padding: 15px; */
+    padding: 15px;
     /* background-color: black; */  
     margin-right: 3px;
     margin-left: -3px;
@@ -33,8 +33,8 @@ td:nth-child(even) {
 }
 
 .card-back-color{
-    /* background-color: #E94b3cff; */
-    background-color: black;
+    background-color: #E94b3cff;
+    /* background-color: black; */
 }
 
 .floated {
@@ -43,5 +43,6 @@ td:nth-child(even) {
 }
 
 .card{
-    background-color: lightslategray;
+    background-color: #E94b3cff;
+    border-color: white;
 }

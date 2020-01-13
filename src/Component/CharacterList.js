@@ -14,8 +14,6 @@ const CharacterList = (props) => {
     else {
         return <div>No Search Result found</div>
     }
-    
-
 }
 
 

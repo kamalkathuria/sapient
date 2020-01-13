@@ -1,4 +1,5 @@
 import React from 'react';
+import API from '../API/rickmorty';
 import '../CSS/App.css';
 import SearchBar from './SearchBar';
 import CharacterList from './CharacterList';
@@ -19,16 +20,18 @@ class App extends React.Component {
         this.fetchCharacters();
     }
 
+    //Fetching characters on load of page
     fetchCharacters = async (filters) => {
-        const response = await fetch('https://rickandmortyapi.com/api/character?' + filters);
+        const response = await fetch(API.characterFetch + filters);
         const data = await response.json();
         this.setState({ characters: data.results, displayedCharacters: data.results });
         this.getSpecies();
     };
 
+    //Searching of character
     onSearch = async (term) => {
         if (term) {
-            const res = await fetch(`https://rickandmortyapi.com/api/character/?name=${term}`);
+            const res = await fetch(API.searchCharacter + term);
             const data = await res.json();
             if (res) {
                 this.setState({ displayedCharacters: data.results, prevSearchTerm: term });
@@ -37,10 +40,12 @@ class App extends React.Component {
         else { this.setState({ displayedCharacters: this.state.characters }) }
     }
 
+    //Sort according to ID
     onSort = (sortedCharacters) => {
         this.setState({ displayedCharacters: sortedCharacters });
     };
 
+    //Getting all the species. Since there is a bug in the API, instead of pulling all the characters, it only picks the first 20
     getSpecies = () => {
         let species = this.state.characters.map(characters => {
             return characters.species
@@ -49,17 +54,13 @@ class App extends React.Component {
         this.setState({ species: filteredSpecies });
     }
 
-    filteredSpecies = (filteredSpecies) => {
-        this.setState({ displayedCharacters: filteredSpecies });
-    }
-
     render() {
         return (
             <div className="container">
                 <div>
                     <h2>Selected Filters</h2>
                 </div>
-                <div className='col-3'>
+                <div className='col-5'>
                     <p>Filter</p>
                     <Species
                         species={this.state.species}
@@ -68,7 +69,7 @@ class App extends React.Component {
 
                     />
                 </div>
-                <div className='col-9'>
+                <div className='col-7'>
                     <SearchBar
                         onSearch={this.onSearch}
                     />
@@ -80,6 +81,7 @@ class App extends React.Component {
                 <CharacterList
                     list={this.state.displayedCharacters}
                 />
+
             </div>
         )
     }
